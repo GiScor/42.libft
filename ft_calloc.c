@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 18:04:21 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/06/01 18:34:52 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/01 18:57:22 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*mem;
 
 	mem = NULL;
-	if (!(nmemb < size / INT_MAX))
-		mem = malloc(nmemb * size);
+	if (size != 0 && nmemb > SIZE_MAX / size)
+			return NULL;
+	mem = malloc(nmemb * size);
 	if (!mem)
 			return NULL;
-	ft_bzero(mem, size);
+	if (nmemb * size > 0)
+			mem = ft_bzero(mem, size + 1);
 	return(mem);
 }
