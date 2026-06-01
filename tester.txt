@@ -1,0 +1,54 @@
+==95531==    by 0x4052FB: ft_itoa (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x4051E5: ft_putnbr_fd (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x404A94: main (ft_putnbr_fd_test.cpp:24)
+==95531== 
+==95531== 3 bytes in 1 blocks are definitely lost in loss record 2 of 5
+==95531==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==95531==    by 0x4052FB: ft_itoa (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x4051E5: ft_putnbr_fd (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x404B57: main (ft_putnbr_fd_test.cpp:32)
+==95531== 
+==95531== 4 bytes in 1 blocks are definitely lost in loss record 3 of 5
+==95531==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==95531==    by 0x4052FB: ft_itoa (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x4051E5: ft_putnbr_fd (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x404DA4: main (ft_putnbr_fd_test.cpp:56)
+==95531== 
+==95531== 11 bytes in 1 blocks are definitely lost in loss record 4 of 5
+==95531==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==95531==    by 0x4052FB: ft_itoa (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x4051E5: ft_putnbr_fd (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x404BFA: main (ft_putnbr_fd_test.cpp:40)
+==95531== 
+==95531== 12 bytes in 1 blocks are definitely lost in loss record 5 of 5
+==95531==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==95531==    by 0x4052FB: ft_itoa (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x4051E5: ft_putnbr_fd (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95531==    by 0x404CCF: main (ft_putnbr_fd_test.cpp:48)
+==95531== 
+ft_striteri	: 1.OK 2.OK 3.OK 
+ft_lstnew	: 1.OK 2.OK 3.MOK 
+ft_lstadd_front	: ==95574== Invalid read of size 8
+==95574==    at 0x404A09: main (ft_lstadd_front_test.cpp:23)
+==95574==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==95574== 
+1.SIGSEGV
+ft_lstsize	: 1.OK 2.KO 3.KO 
+==95588== 16 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==95588==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==95588==    by 0x404B95: ft_lstnew (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95588==    by 0x404A0A: main (ft_lstsize_test.cpp:23)
+==95588== 
+==95588== 16 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==95588==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==95588==    by 0x404B95: ft_lstnew (in /home/gscorzon/Projects/libft/libftTester/a.out)
+==95588==    by 0x404A40: main (ft_lstsize_test.cpp:25)
+==95588== 
+ft_lstlast	: 1.OK 2.OK 3.OK 4.OK 
+ft_lstadd_back	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+ft_lstdelone	: 
+ft_lstclear	: 1.OK 
+ft_lstiter	: 1.KO 2.KO 3.KO 4.KO 
+ft_lstmap	: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 
+---------------------------------------------------------------------------------------------------------
+~/Projects/libft/libftTester (master*) »                                                 gscorzon@c2r5s7
