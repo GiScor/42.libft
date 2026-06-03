@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 18:38:41 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/06/01 18:56:54 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/02 18:25:15 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
-size_t			ft_strlcat(char *dst, char *src, unsigned int size);
+size_t			ft_strlcat(char *dst, const char *src, size_t size);
 size_t			ft_strlcpy(char *dst, const char *src, size_t size);
 size_t			ft_strlen(const char *s);
 t_list			*ft_lstlast(t_list *lst);

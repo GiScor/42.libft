@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 14:54:12 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/27 17:44:33 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/03 18:11:02 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	en = ft_strlen(s1);
 	while(is_set(s1[st], set))
 			st++;
+	if (st == en)
+			return (ft_strdup(""));
 	while(is_set(s1[en-1], set))
 			en--;
 	return (ft_substr(s1, st, en - st));

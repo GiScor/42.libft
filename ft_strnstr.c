@@ -6,42 +6,34 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 16:51:14 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/21 17:13:21 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/03 15:22:57 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <bsd/string.h>
+#include "libft.h"
 
-char *ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
 	i = 0;
 	if (!little[0])
-		return ((char*)big);
+		return ((char *)big);
+	if (!big)
+		return (NULL);
+	if (len == 0)
+		return (NULL);
 	while (big[i])
 	{
 		j = 0;
-		while (big[i + j] && big[i + j] == little[j])
+		while (big[i + j] && big[i + j] == little[j] && i + j < len)
 		{
 			j++;
 			if (little[j] == 0 || j == len)
-				return ((char*)big+i);
+				return ((char *)big + i);
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-/*
-int	main()
-{
-	char*	big = "abcde";
-	char	little[] = "zbcde";
-	size_t	len = 3;
-	printf("%s\n", ft_strnstr(big, little, len));
-	printf("%s", strnstr(big, little, len));
-}
-*/

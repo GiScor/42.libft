@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 18:56:05 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/21 10:47:56 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/02 17:36:42 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char *ft_strchr(const char *s, int c)
 	ptr = (char *)s;
 	while (*ptr)
 	{
-		if (*ptr == c)
+		if (*ptr == (char)c)
 			return ptr;
 		ptr++;
 	}
+	if (*ptr == (char)c)
+			return ptr;
 	return NULL;
 }
 

@@ -6,45 +6,35 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 18:17:25 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/20 18:44:39 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/03 13:31:25 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-size_t	ft_strlcat(char *dst, char *src, unsigned int size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dst_len;
-	size_t	src_len;
-	size_t	i;
+	size_t	dlen;
+	size_t	slen;
+	size_t	rv;
 
-	i = 0;
-	dst_len = 0;
-	src_len = 0;
-	while (dst[dst_len] != 0)
-		dst_len++;
-	while (src[src_len] != 0)
-		src_len++;
-	while (src[i] && i < size)
+	dlen = ft_strlen(dst);
+	slen = ft_strlen(src);
+	if (size > dlen)
+		rv = dlen + slen;
+	else
+		rv = size + slen;
+	while (*dst && size > 0)
 	{
-		dst[dst_len + i] = src[i];
-		i++;
-		if (i == size)
-			dst[dst_len + i] = 0;
+		dst++;
+		size--;
 	}
-	return (dst_len + src_len);
+	while (size > 1 && *src)
+	{
+		*dst++ = *src++;
+		size--;
+	}
+	if (size == 1)
+		*dst = 0;
+	return (rv);
 }
-/*
-int	main(void)
-{
-	size_t size;
-	char *src;
-	
-	src = " come va";
-	char dst[26] = "ciao bro";
-	size = 3;
-	size_t a = ft_strlcat(dst,src,size);
-	printf("\n%zu\n", a);
-	printf("\n%s\n", dst);
-}
-*/
