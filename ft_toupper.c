@@ -6,24 +6,16 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 18:45:53 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/20 18:53:30 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:57:45 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
 	else
-		return c;
+		return (c);
 }
-/*
-int main ()
-{
-#include <stdio.h>
-#include <ctype.h>
-	printf("%c", ft_toupper('a'));
-	printf("%c", toupper('a'));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 12:04:54 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/25 14:48:10 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 19:15:28 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	char	*s;
 
-	s = ft_itoa(n);	
+	s = ft_itoa(n);
 	ft_putstr_fd(s, fd);
+	free (s);
 }

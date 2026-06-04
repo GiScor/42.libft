@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 12:31:08 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/27 15:54:24 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:54:34 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ int	ft_lstsize(t_list *lst)
 
 	i = 1;
 	if (!lst)
-		return 0;
+		return (0);
 	while (lst->next)
 	{
 		lst = lst->next;
 		i++;
 	}
-	return i;
+	return (i);
 }

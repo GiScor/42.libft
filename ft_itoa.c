@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 15:59:18 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/24 17:46:52 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:12:51 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,25 +22,27 @@ int	ft_countdigits(long int n)
 		i++;
 		n *= -1;
 	}
+	if (n == 0)
+		return (1);
 	while (n > 0)
 	{
 		i++;
 		n /= 10;
 	}
-	return i;
+	return (i);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*nm;
+	char		*nm;
 	long int	num;
-	int	i;
+	int			i;
 
 	i = ft_countdigits((long)n);
 	printf("%d\n", i);
 	nm = malloc(sizeof(char) * i + 1);
 	if (!nm)
-		return NULL;
+		return (NULL);
 	nm[i] = '\0';
 	num = n;
 	if (num == 0)
@@ -53,7 +55,7 @@ char	*ft_itoa(int n)
 	while (num > 0)
 	{
 		i--;
-		nm[i] = num%10 + '0';
+		nm[i] = num % 10 + '0';
 		num /= 10;
 	}
 	return (nm);

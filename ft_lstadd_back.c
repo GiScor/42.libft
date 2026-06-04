@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:00:47 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/28 16:06:33 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:56:13 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	{
 		*lst = new;
 		return ;
-	}	
+	}
 	last = ft_lstlast(*lst);
 	last->next = new;
 }

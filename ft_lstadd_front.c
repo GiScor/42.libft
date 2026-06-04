@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 17:39:22 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/05/28 18:46:27 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 18:32:28 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst || !*lst || !new)
-		return ;
 	new->next = *lst;
 	*lst = new;
 }

@@ -6,39 +6,24 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/21 11:11:13 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/06/02 18:00:51 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/04 19:14:20 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
 
 	i = 0;
 	while (i < n)
 	{
-		if (*(unsigned char*)s1 != *(unsigned char*)s2)
-			return(*(unsigned char*)s1 - *(unsigned char*)s2);
+		if (*(unsigned char *)s1 != *(unsigned char *)s2)
+			return (*(unsigned char *)s1 - *(unsigned char *)s2);
 		i++;
 		s1++;
 		s2++;
 	}
-	return 0;
+	return (0);
 }
-
-/*
-int	main()
-{
-	int	a = 1610612743;
-	int	b = 1594944;
-	int	*s1 = &a;
-	int	*s2 = &b;
-
-	printf("\nmemcmp: %d\n", memcmp(s1,s2,4));
-	printf("\nft_memcmp: %d\n", ft_memcmp(s1,s2,4));
-	printf("\na: %8X", a);
-	printf("\nb: %8X\n", b);
-}
-*/
