@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/06/06 14:06:00 by gscorzon          #+#    #+#              #
+#    Updated: 2026/06/06 14:12:08 by gscorzon         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME	= libft.a
 CFLAGS	= -Wall -Wextra -Werror
 SRCS	= ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
@@ -16,18 +28,11 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
-	ranlib $(NAME)
 $(OBJS): $(SRCS)
 	cc -c $(CFLAGS) $(SRCS)
-test: 
-	cc $(CFLAGS) -g main.c libft.a -o test
-test_clean:
-	rm -f test
-test_re: test_clean test
-
 clean:
 	rm -f $(OBJS)
 fclean: clean
 	rm -f $(NAME)
 re: fclean all
-
+.PHONY: all clean fclean re

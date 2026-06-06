@@ -6,7 +6,7 @@
 /*   By: gscorzon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/22 14:09:00 by gscorzon          #+#    #+#             */
-/*   Updated: 2026/06/04 19:16:01 by gscorzon         ###   ########.fr       */
+/*   Updated: 2026/06/06 13:47:22 by gscorzon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	d[i] = 0;
 	return (d);
 }
-/*
-int	main()
-{
-	char	*s = "diocane";
-	char	*d = ft_substr(s, 3, 5);
-	printf("%s\n", d);
-	free(d);
-}
-*/
